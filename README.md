@@ -17,4 +17,12 @@ It is illustrated that, the seasonality features of this electricity demanding t
 
 ## Construct a time series model with extra-regressors
 Look into the dataset, we could observe that there is V-shape relationship between the electricity demanding and the max temperature. It would be easy to explain this V-shape relation, during cold or hot weather, peoplre are always having high demanding of electricity energy. Here we made a transformation on the data of max temperature:
-$$y_i = ABS(x_i-x_mean)$$
+$$y_i = ABS(x_i-x_{mean})$$
+Then we would have a new variable named max temperature 1 that has a almost linear relation with electricity demanding.<br>
+
+Based on the analysis above, the new varibale max temperature 1 would be selected as the extra regressor for electricity demanding. Here a Grid Search method is also leveraged to help tune the parameters.<br>
+With max temperature 1 embedded in as an extra regressor, this new model would have a stronger capability in capturing larger fluctuations in the time series:<br>
+
+Thereby it will have a lower MAE and a higher correlation:<br>
+
+***For more details regarding parameter tuning and compoents with seasonality in different lever, please check my Jupyter Notebook***
