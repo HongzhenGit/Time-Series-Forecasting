@@ -16,13 +16,13 @@ Here is the fittings and predictions made by this uni-variate model:<br>
 It is illustrated that, the seasonality features of this electricity demanding time series could be well modeled. However, the model performance is not good enough for some values that are out of a normal range(not good at describing the fluctuations).It would be more significant on a scatter plot between actual demandings and model estimates. Here our MAE(Mean Absolute Error) is 6.5 and the correlation coeff is 0.77.<br>
 ![Unimodel Correlations](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/unimodel_corr.png)<br>
 ## Construct a time series model with extra-regressors
-Look into the dataset, we could observe that there is V-shape relationship between the electricity demanding and the max temperature. It would be easy to explain this V-shape relation, during cold or hot weather, peoplre are always having high demanding of electricity energy. Here we made a transformation on the data of max temperature:
+Look into the dataset, we could observe that there is V-shape relationship between the electricity demanding and the max temperature. It would be easy to explain this V-shape relation: During cold or hot weather, peoplre are always having high demanding of electricity energy. Here we made a transformation on the data of max temperature:
 $$y_i = ABS(x_i-x_{mean})$$
 Then we would have a new variable named max temperature 1 that has a almost linear relation with electricity demanding.<br>
-
+![Scatter Plot](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/variable_scatters.png)<br>
 Based on the analysis above, the new varibale max temperature 1 would be selected as the extra regressor for electricity demanding. Here a Grid Search method is also leveraged to help tune the parameters.<br>
 With max temperature 1 embedded in as an extra regressor, this new model would have a stronger capability in capturing larger fluctuations in the time series:<br>
-
+![Multimodel Fits and Predicts](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/multimodel_fits_predictions.png)<br>
 Thereby it will have a lower MAE and a higher correlation:<br>
-
+![Multimodel Correlations](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/multimodel_corr.png)<br>
 ***For more details regarding parameter tuning and compoents with seasonality in different lever, please check my Jupyter Notebook***
