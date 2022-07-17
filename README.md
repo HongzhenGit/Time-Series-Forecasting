@@ -25,4 +25,4 @@ With max temperature 1 embedded in as an extra regressor, this new model would h
 ![Multimodel Fits and Predicts](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/multimodel_fits_predictions.png)<br>
 Thereby it will have a lower MAE and a higher correlation:<br>
 ![Multimodel Correlations](https://github.com/HongzhenGit/Time-Series-Forecasting/blob/main/Assets/multimodel_corr.png)<br>
-***For more details regarding parameter tuning and compoents with seasonality in different lever, please check my Jupyter Notebook***
+***For more details regarding parameter tuning and compoents with seasonality in different level, please check my Jupyter Notebook***
